@@ -30,6 +30,6 @@ then
 	fi
 fi
 cp $1 $2
-echo "file successfullt copied"
+echo "file successfully copied"
 
 exit 0	
