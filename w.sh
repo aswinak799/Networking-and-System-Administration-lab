@@ -2,7 +2,7 @@
 if [ $# -ne 0 ]
 then
 	 echo "Syntax error"
-	 echo "< $0 >"
+	 echo "syntaxis < $0 >"
 	exit
 fi
 ter=`tty`

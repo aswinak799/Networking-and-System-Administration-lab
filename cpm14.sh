@@ -1,3 +1,4 @@
+#14. Shell script to modify cp command considering all error possibilities
 if [ $# -ne 2 ]
 then 
 	echo "syntax error <$0> <sorce file> <destination file>"

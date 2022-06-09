@@ -3,8 +3,8 @@
 if [ $# -ne 1 ]
 then
 	echo "syntax error"
-	echo " <$0> <filename>"
-	exit
+	echo "syntax is <$0> <filename>"
+	exit 1
 fi
 
 file=$1
@@ -22,3 +22,4 @@ do
 cat $file | head -$c | tail -n +$c
 c=`expr $c - 1`
 done 
+exit 0

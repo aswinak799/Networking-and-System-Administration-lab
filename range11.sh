@@ -10,12 +10,14 @@ c=$#
 echo "enter lower limit:"
 
 read l
-echo "enter lower limit:"
+echo "enter upper limit:"
 read u
-file=$1
+
+
 
 while [ $c -gt 0 ]
 do 
+	file=$1
 echo "$1 lines $l to $u"
 
 cat $file | head -$u | tail -n +$l

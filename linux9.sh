@@ -1,19 +1,19 @@
 #9. Shell script to delete all lines if a file containing word linux
-if [ $# -ne 0 ]
+if [ $# -eq 0 ]
 then
-	echo "syntax error"
-	exit
+	echo "syntax error <$0> <filename>"
+	exit 1
 fi
 
-echo " enter the file name:"
-read file
+
+file=$1
 
 ter=`tty`
 exec < $file
 
 while read line
 do
-echo $line | grep linux > file2
+echo $line | grep linux > /dev/null
 	if [ $? -eq 0 ]
 	then
 		continue
@@ -22,5 +22,6 @@ echo $line | grep linux > file2
 done
 
 mv file1 $file
-rm file2
+
 exec < $ter
+	
